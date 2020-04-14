@@ -12,17 +12,16 @@ public class HalvingSum {
         25  =>  25 + 12 + 6 + 3 + 1 = 47
 */
 
-    public static void main(String[] args) {
-        int number = 8;
-        int divisionResult = number;
-        int halvingSum = 0;
-        while (divisionResult != 1){
+        public int halvingSum(int n){
+            int divisionResult = n;
+            int halvingSum = 0;
+            while (divisionResult != 1){
+                halvingSum += divisionResult;
+                divisionResult /= 2;
+            }
             halvingSum += divisionResult;
-            divisionResult /= 2;
-        }
-        halvingSum += divisionResult;
 
-        System.out.println(halvingSum);
+            return halvingSum;
         }
     }
 
